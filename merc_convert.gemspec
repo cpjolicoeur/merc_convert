@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/merc_convert.rb",
+    "merc_convert.gemspec",
     "test/helper.rb",
     "test/test_merc_convert.rb"
   ]
