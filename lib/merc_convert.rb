@@ -3,7 +3,7 @@
 
 class MercConvert
   MAXEXTENT     = 20037508.34
-  
+
   class << self
     include Math
 
@@ -11,15 +11,15 @@ class MercConvert
       lon = (x / MAXEXTENT) * 180
       lat = (y / MAXEXTENT) * 180
       lat = 180/PI * (2 * atan(exp(lat * PI / 180)) - PI / 2)
-      
+
       [lon, lat]
     end
-    
+
     def forward(lon, lat)
       x = lon * MAXEXTENT / 180
       y = log(tan((90+lat) * PI / 360)) / (PI / 180)
       y = y * MAXEXTENT / 180
-      
+
       [x, y]
     end
   end
